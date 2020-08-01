@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Agrega una nueva Foto</title>
+    <link rel="icon" type="image/png" href="img/icoaginaweb.png">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="css/agregar.css" />
+    <!--se usa uncamente para el bton del menu haburgesa-->
+    <script src="funciones/jquery-3.1.0.js"></script>
+    <script src="funciones/myjquery.js"></script>
+
+
+</head>
+
+<body>
+
+    <div id="conte">
+        <div id="contenedor">
+            <div id="cabecera">
+                <h1>Nueva foto!</h1>
+
+            </div>
+
+            <div id="menu">
+                <button id="btn1"><img src="img/icons8-abrir-carpeta-50.png"></button>
+
+                <div id="fondomenu">
+                    <ul>
+                        <li><a href="album.html"><img class="alineadoTextoImagenCentro"
+                                    src="img/home.png">&nbsp;Inicio</a></li>
+                        <li><a href="buscar.html"><img class="alineadoTextoImagenCentro"
+                                    src="img/lupa.png">&nbsp;Buscar</a></li>
+                        <li><a href="#"><img class="alineadoTextoImagenCentro"
+                                    src="img/estrella.svg">&nbsp;Favoritas</a>
+                        </li>
+                        <li><a href="album.html"><img class="alineadoTextoImagenCentro"
+                                    src="img/logout.jpg">&nbsp;Logout</a></li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="formulario" role="form" action="album.html">
+        <div id="titulo">
+            <small class="label label-warning">Sube tu foto</small>
+
+        </div>
+        <br>
+        <div class="form-group">
+            <label class="label_titulo" for="ti">Titulo</label>
+            <br>
+            <input required type="text" class="form-control" id="ti" />
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label class="label_titulo" for="descripcion">Descripción</label>
+            <br>
+            <textarea class="tarea" placeholder="Escribe la descripcion de la foto"></textarea>
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label class="label_titulo" for="etiquetas">Etiquetas</label>
+            <br>
+            <input type="text" class="form-control" id="etiquetas" />
+        </div>
+        <br>
+
+        <div class="form-group">
+
+            <label class="label_titulo" for="photo">Incluya una foto</label>
+            <div class="drag-drop">
+                <input required class="boton_infor" type="file" />
+            </div>
+            <br>
+
+            <button class="boton_suce" type="submit">Subir foto</button>
+            <button class="boton_cn" type="reset">Cancelar</button>
+    </form>
+</body>
+
+</html>

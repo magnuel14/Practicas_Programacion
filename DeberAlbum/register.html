@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Registra a tu cuenta</title>
+    <link rel="icon" type="image/png" href="img/icoaginaweb.png">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="css/register.css" />
+    <!--se usa uncamente para el bton del menu haburgesa-->
+    <script src="funciones/jquery-3.1.0.js"></script>
+    <script src="funciones/myjquery.js"></script>
+    <!-- validacion de clave-->
+    <script src="funciones/validar_contra.js"></script>
+
+
+</head>
+
+<body>
+
+    <div id="conte">
+        <div id="contenedor">
+            <div id="cabecera">
+                <h1>Registrate ahora mismo, es gratis!</h1>
+
+            </div>
+
+            <div id="menu">
+                <button id="btn1"><img src="img/icons8-abrir-carpeta-50.png"></button>
+
+                <div id="fondomenu">
+                    <ul>
+                        <li><a href="album.html"><img class="alineadoTextoImagenCentro"
+                                    src="img/home.png">&nbsp;Inicio</a>
+                        </li>
+                        <li><a href="loguin.html"><img class="alineadoTextoImagenCentro"
+                                    src="img/login.jpg">&nbsp;Login</a>
+                        </li>
+                        <li><a href="register.html"><img class="alineadoTextoImagenCentro"
+                                    src="img/register.jpg">&nbsp;Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form id="formulario" method="POST" action="album.html">
+
+        <div id="titulo">
+            <small class="label label-warning">DATOS GENERALES </small>
+
+        </div>
+        <div class="form-group">
+            <label class="label_titulo" for="nombres">Nombre</label>
+            <br>
+
+            <input type="text" class="form-control" id="nombres" name="nombres" aria-describedby="nombresHelp"
+                placeholder="Ingrese sus nombres" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label class="label_titulo" for="apellidos">Apellidos </label>
+            <br>
+
+            <input type="text" class="form-control" id="apellidos" name="apellidos" aria-describedby="apellidosHelp"
+                placeholder="Ingrese sus apellidos" required>
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label class="label_titulo" for="cedula">Cedula (11 digitos) </label>
+            <br>
+
+            <input type="text" class="form-control" id="cedula" name="cedula" aria-describedby="cedulaHelp"
+                placeholder="Ingrese la cedula" pattern="^[9|8|7|6|5|4|3|2|1|0]\d{9}$">
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label class="label_titulo" for="fecha_nac">Fecha de nacimiento </label>
+            <br>
+
+            <input type="date" class="form-control" id="fecha_nac" name="fecha_nac" aria-describedby="fecha_nacHelp"
+                placeholder="Ingrese la cedula" style="text-align:center" required>
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label class="label_titulo" for="edad">Edad</label>
+            <br>
+
+            <input type="text" name="edad" id="edad" class="form-control" style="text-align:center" placeholder="Edad" readonly>
+        </div>
+        <br>
+
+        <div id="titulo">
+            <small>DATOS DE LA CUENTA </small>
+        </div>
+        <div class="form-group">
+            <label class="label_titulo" for="exampleInputEmail1">Correo electronico </label>
+            <br>
+            <input type="email" class="form-control" id="correo" name="correo" aria-describedby="emailHelp"
+                placeholder="Ingrese el correo electronico personal" required>
+
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label class="label_titulo" for="exampleInputPassword1">Clave </label>
+            <br>
+
+            <input required type="password" class="form-control" name="clave" id="pass1" placeholder="Clave">
+            <br>
+            <label class="label_titulo" for="exampleInputPassword1">Confirma tu clave </label>
+            <br>
+
+            <input required type="password" class="form-control" name="clave" id="pass2"
+                placeholder="Escribe de nuevo tu clave">
+                <br>
+                <a id="tc" ></a>
+                <a id="tc1" ></a>
+
+        </div>
+        <br>
+
+        <button id="bon1" class="boton_infor" type="submit">Registrate</button>
+        <br>
+        <br>
+        <a class="boton_cn" href="album.html">Volver al inicio</a>
+    </form>
+    </div>
+
+</body>
+
+</html>

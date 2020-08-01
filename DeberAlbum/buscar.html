@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Agrega una nueva Foto</title>
+    <link rel="icon" type="image/png" href="img/icoaginaweb.png">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="css/buscar.css" />
+    <!--se usa uncamente para el bton del menu haburgesa-->
+    <script src="funciones/jquery-3.1.0.js"></script>
+    <script src="funciones/myjquery.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div id="conte">
+        <div id="contenedor">
+            <div id="cabecera">
+                <h1>Nueva foto!</h1>
+
+            </div>
+
+            <div id="menu">
+                <button id="btn1"><img src="img/icons8-abrir-carpeta-50.png"></button>
+
+                <div id="fondomenu">
+                    <ul>
+                        <li><a href="album.html"><img class="alineadoTextoImagenCentro"
+                                    src="img/home.png">&nbsp;Inicio</a></li>
+                        <li><a href="#"><img class="alineadoTextoImagenCentro" src="img/agregar.png">&nbsp;Nueva
+                                Foto</a>
+                        </li>
+                        <li><a href="#"><img class="alineadoTextoImagenCentro"
+                                    src="img/estrella.svg">&nbsp;Favoritas</a>
+                        </li>
+                        <li><a href="album.html"><img class="alineadoTextoImagenCentro"
+                                    src="img/logout.jpg">&nbsp;Logout</a></li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="formulario" role="form" action="album.html">
+        <div class="form-group">
+            <div id="titulo">
+                <small class="label label-warning">Categoria para realizar la busqueda</small>
+
+            </div>
+            <div class="custom-select" style="width:170px;">
+
+                <select class="">
+                    <option value="0">Titulo</option>
+                    <option value="1">Etiquetas</option>
+                    <option value="2">Agregadas recientemente</option>
+                    <option value="3">Favoritas</option>
+                    <option value="4">Con mayor numero de likes</option>
+                </select>
+            </div>
+            <div class="bus">
+                <input required type="text" placeholder="Describa su busqueda">
+                <button class="boton_suce" type="submit">Buscar</button>
+            </div>
+        </div>
+        </div>
+
+    </form>
+</body>
+<script>
+    var x, i, j, l, ll, selElmnt, a, b, c;
+    /*look for any elements with the class "custom-select":*/
+    x = document.getElementsByClassName("custom-select");
+    l = x.length;
+    for (i = 0; i < l; i++) {
+        selElmnt = x[i].getElementsByTagName("select")[0];
+        ll = selElmnt.length;
+        /*for each element, create a new DIV that will act as the selected item:*/
+        a = document.createElement("DIV");
+        a.setAttribute("class", "select-selected");
+        a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+        x[i].appendChild(a);
+        /*for each element, create a new DIV that will contain the option list:*/
+        b = document.createElement("DIV");
+        b.setAttribute("class", "select-items select-hide");
+        for (j = 1; j < ll; j++) {
+            /*for each option in the original select element,
+            create a new DIV that will act as an option item:*/
+            c = document.createElement("DIV");
+            c.innerHTML = selElmnt.options[j].innerHTML;
+            c.addEventListener("click", function (e) {
+                /*when an item is clicked, update the original select box,
+                and the selected item:*/
+                var y, i, k, s, h, sl, yl;
+                s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                sl = s.length;
+                h = this.parentNode.previousSibling;
+                for (i = 0; i < sl; i++) {
+                    if (s.options[i].innerHTML == this.innerHTML) {
+                        s.selectedIndex = i;
+                        h.innerHTML = this.innerHTML;
+                        y = this.parentNode.getElementsByClassName("same-as-selected");
+                        yl = y.length;
+                        for (k = 0; k < yl; k++) {
+                            y[k].removeAttribute("class");
+                        }
+                        this.setAttribute("class", "same-as-selected");
+                        break;
+                    }
+                }
+                h.click();
+            });
+            b.appendChild(c);
+        }
+        x[i].appendChild(b);
+        a.addEventListener("click", function (e) {
+            /*when the select box is clicked, close any other select boxes,
+            and open/close the current select box:*/
+            e.stopPropagation();
+            closeAllSelect(this);
+            this.nextSibling.classList.toggle("select-hide");
+            this.classList.toggle("select-arrow-active");
+        });
+    }
+    function closeAllSelect(elmnt) {
+        /*a function that will close all select boxes in the document,
+        except the current select box:*/
+        var x, y, i, xl, yl, arrNo = [];
+        x = document.getElementsByClassName("select-items");
+        y = document.getElementsByClassName("select-selected");
+        xl = x.length;
+        yl = y.length;
+        for (i = 0; i < yl; i++) {
+            if (elmnt == y[i]) {
+                arrNo.push(i)
+            } else {
+                y[i].classList.remove("select-arrow-active");
+            }
+        }
+        for (i = 0; i < xl; i++) {
+            if (arrNo.indexOf(i)) {
+                x[i].classList.add("select-hide");
+            }
+        }
+    }
+    /*if the user clicks anywhere outside the select box,
+    then close all select boxes:*/
+    document.addEventListener("click", closeAllSelect);
+</script>
+
+
+</html>

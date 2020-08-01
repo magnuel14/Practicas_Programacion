@@ -1,0 +1,515 @@
+#btn1{
+    display: none;
+  }
+  /*botones*/
+.boton_infor{
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #ffffff;
+  background-color: #1883ba;
+  border-radius: 6px;
+  border: 2px solid #0016b0;
+}
+.boton_infor:hover{
+  background: rgb(131,58,180);
+        background: linear-gradient(90deg, 
+         rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%,
+         rgba(131,58,180,1) 100%);  
+          color: black;
+}
+.boton_cn{
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  color:black;
+  background-color:rgb(163, 8, 8);
+  border-radius: 6px;
+  border: 2px solid maroon;
+}
+.boton_cn:hover{
+  background-color: rgba(0,100,100,.30);
+  color: white;
+}
+
+
+.boton_suce{
+  text-decoration: none;
+  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: helvetica;
+  font-weight: 600;
+  font-size: 20px;
+  font-style: italic;
+  color: #006505;
+  background-color: #82b085;
+  border-radius: 15px;
+  border: 3px double #006505;
+}
+.boton_suce:hover{
+  background-color: rgba(0,100,100,.30);
+  text-decoration: none;
+}
+.boton_danger{
+  text-decoration: none;
+  padding: 20px;
+  font-family: arial;
+  text-transform: uppercase;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  color: black;
+  background-color: #9b0e0e;
+}
+.boton_danger:hover{
+  color: #9b0e0e;
+  background-color:tomato;
+  text-decoration: none;
+}
+
+/*cuerpo*/
+  
+  body {
+      margin: 0;
+      padding: 0;
+      background: url(../img/fo3.jpeg);
+    }
+    #conte{
+        margin: 0;
+      padding: 0;
+      background: url(../img/imagenes/fondo.jpg) repeat-x;
+    }
+      
+      #contenedor {
+      margin: 0 auto;
+      width: 900px;
+      
+      }
+      #cabecera {
+      height: 120px;
+      background: url(../img/imagenes/fondo1.jpg);
+      
+      }
+    
+      #cabecera h1 {
+      margin: 0;
+      padding: 25px;
+      color: black;
+      text-align: center;
+      
+      background: rgb(131,58,180);
+      background: linear-gradient(90deg,
+       rgba(131,58,180,1) 0%, 
+      rgba(253,29,29,1) 50%, 
+      rgba(252,176,69,1) 100%);
+  
+  
+  }
+  
+      #fondomenu ul li a:hover	{
+        background: rgb(131,58,180);
+        background: linear-gradient(90deg, 
+         rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%,
+         rgba(131,58,180,1) 100%);  
+          color: black;
+      }
+      /*label*/
+      .label_titulo{
+        text-decoration: darkred;
+            font-size: 22px;
+            
+            font-family: Arial, Helvetica, sans-serif;
+            border: 2px solid   #8D87FF ;
+            background-color: #8D87FF;
+            /* For WebKit (Safari, Chrome, etc) */
+            background: #8D87FF -webkit-gradient(linear, left top, left bottom, from(#61FF69), to(#8D87FF)) no-repeat;
+            /* Mozilla,Firefox/Gecko */
+            background: #8D87FF -moz-linear-gradient(top, #61FF69, #8D87FF) no-repeat;
+            /* IE 5.5 - 7 */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#61FF69, endColorstr=#8D87FF) no-repeat;
+            /* IE 8 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#61FF69, endColorstr=#61FF69)" no-repeat;
+            color: black;
+            border-radius: 20px;
+            
+      }
+  
+      /*centrar texto con imagenes*/
+      img.alineadoTextoImagenArriba{
+        vertical-align: text-top;  
+      }
+      img.alineadoTextoImagenCentro{
+        vertical-align: middle;
+       
+      }
+      img.alineadoTextoImagenAbajo{
+        vertical-align: text-bottom;  
+      }
+  
+        /* animacion del titulo */
+      @font-face {
+        font-family: "IBM Plex Sans Roman";
+        src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85648/IBMPlexSansVar-Roman.ttf");
+    }
+    
+    body {
+        font-family: "IBM Plex Sans Roman", Times;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    h1  {
+        font-weight: 50;
+        font-size: 50px;
+        font-variation-settings: 'wght' 50, 'wdth' 85;
+        animation: breathe 3000ms infinite forwards;
+    }
+    
+    @keyframes breathe {
+        60% {
+            font-variation-settings: 'wght' 350, 'wdth' 50;
+        }
+        
+        100% {
+            font-variation-settings: 'wght' 50, 'wdth' 35;
+        }
+    }
+    #ini{
+      font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  font-family: "Arial";
+  text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+  color: #FFF;
+  text-align: center;
+    }
+    #tc{
+      text-decoration: none;
+      font-size: 15px;
+      font-family: 'Times New Roman', Times, serif;
+      background-color: rgba(253,29,29,1);
+      color: black;
+    }
+    #tc1{
+      text-decoration: none;
+      font-size: 15px;
+      font-family: 'Times New Roman', Times, serif;
+      background-color: chartreuse;
+      color: black;
+    }
+    #titulo{
+        border: 2px solid darkslategray ;
+        font: normal 25px arial, helvetica, sans-serif;
+        width: 350px;
+        height: 40px;
+        margin: 0 auto;
+        
+        text-align: center;
+        color: black;
+        background: linear-gradient(90deg,
+           rgba(131,58,180,1) 0%, 
+          rgba(253,29,29,1) 50%, 
+          rgba(252,176,69,1) 100%);
+    
+    
+      }
+      #formulario{
+        border: 5px double  ;
+        font: normal 20px arial, helvetica, sans-serif;
+        text-align: center;
+        color: black;
+        margin: 0 auto;
+        width: 480px;
+        background-color: rgba(0,100,100,.40);
+    
+        height: 160px;
+        border-radius: 20px;
+        
+       
+    
+      }
+
+      /*buscar*/
+      .bus{
+        margin-top: 15px;
+        margin-left:160px ;
+    
+          
+      }
+      /*select*/
+      /*the container must be positioned relative:*/
+.custom-select {
+    position: fixed;
+    font-family: Arial;
+    font-size: 13px;
+    margin-left: 10px;
+    margin-top: 25px;
+    margin-right: 240px;
+
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element:*/
+  }
+  
+  .select-selected {
+    background-color: rgb(131,58,180);
+  }
+  
+  /*style the arrow inside the select element:*/
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /*point the arrow upwards when the select box is open (active):*/
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /*style the items (options), including the selected item:*/
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /*style items (options):*/
+  .select-items {
+    position: absolute;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, 
+     rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%,
+     rgba(131,58,180,1) 100%);  
+      color: black;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+      
+      .tarea{
+        width: 200px;
+        height: 200px;
+      }
+  /* parte responsiva*/
+  @media (min-width: 1201px){
+    #fondomenu img{
+        width: 30px;
+        height: 30px;
+    }
+    
+    #menu {
+    background: url(../img/imagenes/boton-menu.jpg);
+    height: 30px;
+    }
+    #fondomenu {
+    background: url(../img/imagenes/boton-menu3.jpg);
+    width: 485px;
+    height: 30px;
+    }
+    #fondomenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+
+    #fondomenu ul li a	{
+    background: url(../img/imagenes/boton-menu.jpg);
+    width: 120px;
+    height: 30px;
+    margin-left: 1px;
+    float: left;
+    line-height: 30px;
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    
+   
+    }
+   
+
+  
+}
+@media (min-width: 601px) and (max-width: 1200px){
+  
+  #fondomenu img{
+      width: 20px;
+      height: 20px;
+  }
+  #menu {
+  background: url(../img/imagenes/boton-menu.jpg);
+  height: 30px;
+  }
+  #fondomenu {
+  background: url(../img/imagenes/boton-menu3.jpg);
+  width: 305px;
+  height: 30px;
+  }
+  #fondomenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+
+  #fondomenu ul li a	{
+  background: url(../img/imagenes/boton-menu.jpg);
+  width: 75px;
+  height: 30px;
+  margin-left: 1px;
+  float: left;
+  line-height: 30px;
+  font-size: 9px;
+  color:black;
+  text-decoration: none;
+  display: block;
+ 
+  }
+
+  #fondomenu ul li a:hover	{
+  color:blanchedalmond;
+  }
+}
+
+@media  (max-width: 600px){
+  #btn1{
+    display: block;
+    border-radius: 50px;
+
+
+  }
+  #btn1 img{
+    width: 40px;
+    height: 40px;
+    text-align: left;
+  }
+  #btn2{
+    display: none;
+
+  }
+  
+  #fondomenu img{
+    width: 30px;
+    height: 30px;
+}
+#menu {
+background: url(../img/imagenes/boton-menu.jpg);
+height: 30px;
+}
+#fondomenu {
+background: url(../img/imagenes/boton-menu3.jpg);
+width: 90px;
+height: 30px;
+}
+#fondomenu ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+#fondomenu ul li a	{
+background: url(../img/imagenes/boton-menu.jpg);
+width: 90px;
+height: 30px;
+margin-left: 1px;
+float: left;
+text-align: left;
+line-height: 30px;
+font-size: 9px;
+color: white;
+text-decoration: none;
+display: block;
+
+}
+#titulo{
+    border: 2px solid darkslategray ;
+    font: normal 18px arial, helvetica, sans-serif;
+    width: 250px;
+    height: 40px;
+    margin: 0 auto;
+    
+    text-align: center;
+    color: black;
+    background: linear-gradient(90deg,
+       rgba(131,58,180,1) 0%, 
+      rgba(253,29,29,1) 50%, 
+      rgba(252,176,69,1) 100%);
+
+
+  }
+#formulario{
+    border: 5px double  ;
+    font: normal 20px arial, helvetica, sans-serif;
+    text-align: center;
+    color: black;
+    margin: 0 auto;
+    width: 250px;
+    background-color: rgba(0,100,100,.40);
+
+    height: 180px;
+    border-radius: 20px;
+    
+   
+
+  }
+
+      /*buscar*/
+      .bus{
+        margin-top: auto;
+        margin-left:auto ;
+    
+          
+      }
+      /*select*/
+      /*the container must be positioned relative:*/
+.custom-select {
+    position: relative;
+    margin-left: auto;
+    margin-top: auto;
+    margin-right:auto;
+
+  }
+
+}
+
+  
+  
+  
+  
+  
