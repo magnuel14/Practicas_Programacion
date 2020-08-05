@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Insertar jquery</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='jquery-3.1.0.js'></script>
+</head>
+
+<body>
+    <form id="frmajax" method="POST">
+        <label>Nombre</label><input type="text" name="nombre" placeholder="Ingrese su Nnombre no sea bobo">
+        <br>
+        <label>Apellido</label><input type="text" name="Apellido" placeholder="Ingrese su Apellido no sea bobo">
+        <br>
+        <label>Usuaio</label><input type="text" name="Usuaio" placeholder="Ingrese su Usuaio no sea bobo">
+        <br>
+        <label>Password</label><input type="text" name="Password" placeholder="Ingrese su Password no sea bobo">
+        <br>
+        <button id="guardar">guardar</button>
+    </form>
+
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+        $('#guardar').click(function () {
+            var datos = $('#frmajax').serialize();
+            $.ajax({
+                type: "POST",
+                url:"insertar.php",
+                data: datos,
+                success: function(data){
+                    if(data== 1){
+                        alert("SE GUARDO BIEN PIOLA");
+                    }else{
+                        alert("no se grabo ni verga we");
+                    }
+
+                }
+
+
+            });
+            return false;
+        });
+
+    });
+</script>

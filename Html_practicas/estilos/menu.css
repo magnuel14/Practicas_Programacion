@@ -1,0 +1,30 @@
+li{
+	margin: 5px 0 0 0;
+}
+
+ul.nav{
+	list-style: none;
+	display: block;
+	width: 200px;
+	position: relative;
+	top: 50px;
+	left: 100px;
+	padding: 60px 0 60px 0;
+}
+
+ul.nav li a{
+	transition: all 0.3s ease-out;
+	background:red;
+	color:black;
+	padding: 7px 15px 7px 15px;
+	border-radius: 10px;
+	width: 100px;
+	display: block;
+	box-shadow: 2x 2x 4px 7px 15px;
+}
+
+ul.nav li a:hover{
+	background:darkgray;
+	color: #67a5cd;
+	padding: 7px 15px  7px 30px;
+}
