@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block contenido %}
+{% load static%}
+<form method="POST">{% csrf_token %}
+    <table class="table table-striped table-dark">
+        {{formulario_cliente.as_table}}
+
+    </table>
+    <table class="table table-striped table-dark">
+        {{formulario_cuenta.as_table}}
+    </table>
+    <a class="btn btn-success btn-flat m-b-30 m-t-30" type="submit">Guardar Cliente</a>
+
+</form>
+
+
+{% endblock %}
